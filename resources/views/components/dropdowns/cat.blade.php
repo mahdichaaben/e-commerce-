@@ -1,0 +1,1 @@
+<span class="p-2 text-xl font-semibold tracking-wider uppercase ">HYPER</span>
