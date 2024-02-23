@@ -1,16 +1,16 @@
 @props(['product'])
-<div   class="bg-white shadow flex flex-col justify-between h-full rounded overflow-hidden group transition duration-300 ease-in-out transform hover:-translate-y-1">
+<div   class="w-full  bg-white shadow flex flex-col justify-between h-full rounded overflow-hidden group transition duration-300 ease-in-out transform hover:-translate-y-1">
     
-    <div class="relative h-1/2">
+    <div class="relative ">
         @if ($product->images()->count() > 0)
         <img src="{{ Storage::url($product->images()->first()->slug) }}" alt="product 1" class="w-full object-cover h-full">
     @else
         <img src="{{ asset('assets/images/placeholder.jpg') }}" alt="product 1" class="w-full object-cover h-full">
     @endif
     </div>
-    <div class="pt-4 pb-3 px-4">
+    <div class="pt-4 pb-3 px-4 ">
         <a href="{{ route('product.index', ['product' => $product->slug]) }}">
-            <h4 class="uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">
+            <h4 class="uppercase font-medium text-xl mb-2 whitespace-nowrap text-gray-800 hover:text-primary transition">
                 {{ $product->name }}</h4>
         </a>
         <div class="flex items-baseline mb-1 space-x-2">
@@ -66,3 +66,8 @@
         </div>
     </div>
 </div> --}}
+
+
+
+
+{{--  --}}

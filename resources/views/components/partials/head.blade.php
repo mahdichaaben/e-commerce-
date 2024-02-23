@@ -9,10 +9,15 @@
 <link rel="preconnect" href="https://fonts.bunny.net">
 <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 <script src="https://kit.fontawesome.com/45e38e596f.js" crossorigin="anonymous"></script>
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="tailwindconfig.js"></script>
   <!-- Swiper CSS -->
-  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css" />
+<!-- // swiper cdn -->
+<link
+  rel="stylesheet"
+         href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
   @livewireStyles
 @vite(['resources/css/app.css', 'resources/js/app.js'])
