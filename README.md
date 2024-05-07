@@ -1,10 +1,5 @@
 # HYPER: An E-commerce Application Built with Laravel
 
-<p align="center">
-    <a href="https://laravel.com" target="_blank">
-        <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo">
-    </a>
-</p>
 
 HYPER is an e-commerce application built using Laravel. It allows users to browse products, add them to their cart, and make purchases securely.
 
@@ -14,7 +9,7 @@ HYPER is an e-commerce application built using Laravel. It allows users to brows
 - **Product Browsing and Search:** Users can easily browse products and search for specific items.
 - **Shopping Cart Functionality:** Users can add products to their cart and proceed to checkout.
 - **User Profile Settings:** Users can manage their profile information and preferences.
-- **Admin Dashboard:** Administrators have access to a dashboard to manage products, categories, and orders.
+- **Admin Dashboard:** Administrators have access to a dashboard to manage products, categories.
 
 ## Technologies Used
 
