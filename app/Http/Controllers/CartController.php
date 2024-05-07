@@ -54,7 +54,7 @@ class CartController extends Controller
         // Store the modified cart array back to the session
         session(['cart' => $cart]);
     
-        // Dump the modified cart array
+       
         
     
       
