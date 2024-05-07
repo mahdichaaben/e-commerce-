@@ -1,26 +1,59 @@
 @props(['product'])
-<div   class="w-full  bg-white shadow flex flex-col justify-between h-full rounded overflow-hidden group transition duration-300 ease-in-out transform hover:-translate-y-1">
+<div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">    
+    <div class="flex items-end justify-end h-56 w-full bg-cover" style="background-image:url('{{ Storage::url($product->images()->first()->slug) }}')">
+       <form method="POST" action="{{ route('cart.add') }}" >
+        @csrf
+        <input type="hidden" name="product_id" value="{{ $product->id }}">
+        <button type="submit" id="shopbutton"  class="p-2 rounded-full bg-blue-600 text-white mx-5 -mb-4 hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
+            <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+        </button>
     
-    <div class="relative ">
-        @if ($product->images()->count() > 0)
-        <img src="{{ Storage::url($product->images()->first()->slug) }}" alt="product 1" class="w-full object-cover h-full">
-    @else
-        <img src="{{ asset('assets/images/placeholder.jpg') }}" alt="product 1" class="w-full object-cover h-full">
-    @endif
+    </form>
+      
     </div>
-    <div class="pt-4 pb-3 px-4 ">
-        <a href="{{ route('product.index', ['product' => $product->slug]) }}">
-            <h4 class="uppercase font-medium text-xl mb-2 whitespace-nowrap text-gray-800 hover:text-primary transition">
-                {{ $product->name }}</h4>
-        </a>
-        <div class="flex items-baseline mb-1 space-x-2">
-            <p class="text-xl text-primary font-semibold">${{ $product->price }}</p>
-            <p class="text-sm text-gray-400 line-through">${{ $product->discount_price }}</p>
-        </div>
+    <div class="px-5 py-3">
+      <a href="{{ route('product.index', ['product' => $product->slug]) }}">
+        <h3 class="text-gray-700 uppercase">{{ $product->name }}</h3>
+    </a>
+        <span class="text-gray-500 mt-2">${{ $product->price }}</span>
+        <p class="text-sm text-gray-400 line-through">${{ $product->discount_price }}</p>
     </div>
-
-    <a href="#" class="block w-full py-1 text-center text-white bg-gray-900 border border-gray-900 rounded-b hover:bg-transparent hover:text-gray-900 transition">Add to cart</a>
 </div>
+
+
+<script type="text/javascript">
+function addToCart(productId) {
+    console.log('/cart/'+ productId);
+    fetch('/cart/'+ productId, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+        },
+        body: JSON.stringify({
+            productId: productId
+        })
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Failed to add product to cart');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log(data.message); // Log success message
+        // Update UI or perform any other actions on success
+    })
+    .catch(error => {
+        console.error('Error adding product to cart:', error);
+        // Handle error scenario here, such as displaying an error message to the user
+    });
+}
+
+
+</script>
+
+
 
 
 

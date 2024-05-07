@@ -17,7 +17,7 @@ class CategoryController extends Controller
         return $this->handleCategoryView($category);
     }
 
-    public function showChild($parentName, $childName)
+    public function showChild($parentName,$childName)
     {
         $category = Category::where('name', $childName)->firstOrFail();
         return $this->handleCategoryView($category);

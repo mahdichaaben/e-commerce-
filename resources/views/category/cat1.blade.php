@@ -3,8 +3,7 @@
         {{ $category->name }}
     </x-slot>
     <x-slot name="slot">
-        @include('components.partials.header')
-        <x-breadcrumb :breadcrumbs="$breadcrumbs" />
+        @include('category.breadcrumb',['breadcrumbs'=>$breadcrumbs])
         <div class=" grid grid-cols-3 gap-2 sm:grid-cols-6  md:gap-3 xl:gap-8">
             @foreach($category->children as $category)
                 <a href="{{ route('category.show', ['category' => $category->name]) }}" class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">

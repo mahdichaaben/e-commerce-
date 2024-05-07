@@ -15,7 +15,7 @@ class ProductController extends Controller
             'product'=> $product
         ]);
     }
-    public function storeComment(Request $request, Product $product)
+    public function storeComment(Request $request)
     {
         $request->validate([
             'body' => 'required|string|max:255',

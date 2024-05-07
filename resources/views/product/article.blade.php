@@ -3,9 +3,8 @@
                         article
                     </x-slot>
                     <x-slot name="slot">
-                        @include('components.partials.header')
 
-                        <div class="flex flex-col justify-between lg:flex-row px-5 gap-8 items-start">
+                        <div class="flex flex-col justify-between mt-10 lg:flex-row px-5 gap-8 items-start">
                             <div class="w-full  md:w-[50%]">
                                 @if ($product->images && count($product->images) > 0)
                                     <!-- Main Product Image using the first image from the images -->

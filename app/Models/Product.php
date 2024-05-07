@@ -36,4 +36,19 @@ class Product extends Model
     {
         return $this->hasMany(Comment::class);
     }
+
+
+    public function scopeFilter($query,$filters){
+
+        
+        $query->where('name' ,'like','%'.request('keywords').'%');
+
+
+
+
+
+    }
+
+
+
 }
