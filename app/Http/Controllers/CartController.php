@@ -57,7 +57,7 @@ class CartController extends Controller
         // Dump the modified cart array
         
     
-        // Redirect to the cart page
+      
         return redirect()->route('cart.show');
     }
 
