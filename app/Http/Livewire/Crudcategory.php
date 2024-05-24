@@ -78,7 +78,7 @@ $this->currentToDelete=$id;
             $this->validate([
                 'name' => ['required', Rule::unique('categories', 'name')->ignore($this->currentToEdit->id)],
                
-                'image' => 'required|mimes:jpeg,png,gif,svg,ico|max:1024',
+                'image' => 'required|mimes:jpeg,png,gif,svg,ico|max:8024',
                 'parent_id'=>'nullable|exists:categories,id',
             ]);
            $curimage=$this->currentToEdit->image;
@@ -99,7 +99,7 @@ $this->currentToDelete=$id;
             
             $validateddata=$this->validate([
                 'name' => 'required|unique:categories,name',
-                'image' => 'required|mimes:jpeg,png,gif,svg,ico|max:1024',
+                'image' => 'required|mimes:jpeg,png,gif,svg,ico|max:8024',
                 'parent_id'=>'nullable|exists:categories,id'
             ]);
             $store_icon=$this->image->store('public/icons');

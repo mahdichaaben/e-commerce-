@@ -1,5 +1,5 @@
-<div>
-    <h1>Products</h1>
+<div  class="m-6">
+    <h1 class="text-xl font-bold text-gray-800">Products</h1>
     <div class="mt-6 sm:px-2">
         <div class="flex justify-between">
             <div>

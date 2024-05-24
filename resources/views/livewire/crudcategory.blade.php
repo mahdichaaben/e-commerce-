@@ -1,7 +1,6 @@
 <div>
-    <h1>categories</h1>
-    <div class="mt-6">
-
+    <div class="m-6">
+      <h1 class="text-xl font-bold text-gray-800">Categories</h1>
         <div class="flex justify-between">
             <div class="">
                 <input wire:model.debounce.500ms="q" type="search" placeholder="search" class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
@@ -14,14 +13,14 @@
             </div>
         </div>
 @if($categories->count())
-<div class="py-5 flex flex-col">
+<div class="p-5 flex flex-col">
     <div class="-m-1.5 overflow-x-auto">
       <div class="p-1.5 min-w-full inline-block align-middle">
         <div class="border rounded-lg shadow overflow-hidden dark:border-gray-700 dark:shadow-gray-900">
           <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
             <thead class="bg-gray-50 dark:bg-gray-700">
               <tr>
-                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase dark:text-gray-400">id</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase dark:text-gray-400">level</th>
                 <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase dark:text-gray-400">name</th>
                 <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase dark:text-gray-400">image</th>
                 <th scope="col" class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase dark:text-gray-400">actions</th>
@@ -31,7 +30,7 @@
             <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
               @foreach ($categories as $category)
               <tr>
-                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-gray-200">{{$category->id}}</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-gray-200">{{$category->level}}</td>
                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">{{$category->name}}</td>
                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200"><img src="{{Storage::url($category->image)}}" alt="icon" class="w-20 rounded-xl"></td>
                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
