@@ -81,11 +81,19 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 - [Laravel Bootcamp](https://bootcamp.laravel.com)
 - [Laracasts](https://laracasts.com)
 
-## Contributing
+## Screenshots
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Here are some screenshots of the HYPER application:
 
-## License
-
-This project is licensed under the MIT License.
->>>>>>> a08db4812ac1aae69aec887a1d3aee70d6309b21
+<img src="demo/Capture.JPG" width="400" alt="Screenshot 1">
+<img src="demo/comment_product.JPG" width="400" alt="Screenshot 2">
+<img src="demo/dashboard_product.JPG" width="400" alt="Screenshot 3">
+<img src="demo/edit_product.JPG" width="400" alt="Screenshot 4">
+<img src="demo/home.JPG" width="400" alt="Screenshot 5">
+<img src="demo/home2.JPG" width="400" alt="Screenshot 6">
+<img src="demo/Ivl2.JPG" width="400" alt="Screenshot 7">
+<img src="demo/profilesetting.JPG" width="400" alt="Screenshot 8">
+<img src="demo/pull.JPG" width="400" alt="Screenshot 9">
+<img src="demo/setting.JPG" width="400" alt="Screenshot 10">
+<img src="demo/shop.JPG" width="400" alt="Screenshot 11">
+<img src="demo/slidebar.JPG" width="400" alt="Screenshot 12">
